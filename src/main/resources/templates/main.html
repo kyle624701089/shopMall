@@ -1,0 +1,1006 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=640,maximum-scale=2.0,user-scalable=no,target-densitydpi=device-dpi"/>
+    <meta name="applicable-devive" content="mobile"/>
+    <meta content="yes" name="apple-mobile-web-app-capable"/>
+    <meta name="format-detection" content="telephone=no,email=no,adress=no"/>
+    <title>稼荷生鲜-生鲜网上商城，你的餐桌上的健康管家，生鲜O2O</title>
+    <link rel="stylesheet" type="text/css" href="css/reset.css"/>
+    <link rel="stylesheet" type="text/css" href="css/public.css"/>
+    <link rel="stylesheet" type="text/css" href="css/index.css"/>
+    <link rel="stylesheet" type="text/css" href="swiper/swiper-3.4.2.min.css"/>
+</head>
+<body>
+<div id='wx_logo' style='margin:0 auto;display:none;'>
+    <img src="http://www.jiahe020.com/images/logo.jpg"/>
+</div>
+<header class="index">
+    <div class="index-header">
+        <div class="headmenu"><a href="category.php"><img src="templates/images/index_menu.png"/></a></div>
+        <div class="headmdue"><img src="templates/images/logo.png"/></div>
+        <div class="headselect" style="display:none;">
+            <select name="city">
+                <option value="36">安庆</option>
+                <option value="37">蚌埠</option>
+                <option value="38">巢湖</option>
+                <option value="39">池州</option>
+                <option value="40">滁州</option>
+                <option value="41">阜阳</option>
+                <option value="42">淮北</option>
+                <option value="43">淮南</option>
+                <option value="44">黄山</option>
+                <option value="45">六安</option>
+                <option value="46">马鞍山</option>
+                <option value="47">宿州</option>
+                <option value="48">铜陵</option>
+                <option value="49">芜湖</option>
+                <option value="50">宣城</option>
+                <option value="51">亳州</option>
+                <option value="52">北京</option>
+                <option value="53">福州</option>
+                <option value="54">龙岩</option>
+                <option value="55">南平</option>
+                <option value="56">宁德</option>
+                <option value="57">莆田</option>
+                <option value="58">泉州</option>
+                <option value="59">三明</option>
+                <option value="60">厦门</option>
+                <option value="61">漳州</option>
+                <option value="62">兰州</option>
+                <option value="63">白银</option>
+                <option value="64">定西</option>
+                <option value="65">甘南</option>
+                <option value="66">嘉峪关</option>
+                <option value="67">金昌</option>
+                <option value="68">酒泉</option>
+                <option value="69">临夏</option>
+                <option value="70">陇南</option>
+                <option value="71">平凉</option>
+                <option value="72">庆阳</option>
+                <option value="73">天水</option>
+                <option value="74">武威</option>
+                <option value="75">张掖</option>
+                <option value="76">广州</option>
+                <option value="77">深圳</option>
+                <option value="78">潮州</option>
+                <option value="79">东莞</option>
+                <option value="80">佛山</option>
+                <option value="81">河源</option>
+                <option value="82">惠州</option>
+                <option value="83">江门</option>
+                <option value="84">揭阳</option>
+                <option value="85">茂名</option>
+                <option value="86">梅州</option>
+                <option value="87">清远</option>
+                <option value="88">汕头</option>
+                <option value="89">汕尾</option>
+                <option value="90">韶关</option>
+                <option value="91">阳江</option>
+                <option value="92">云浮</option>
+                <option value="93">湛江</option>
+                <option value="94">肇庆</option>
+                <option value="95">中山</option>
+                <option value="96">珠海</option>
+                <option value="97">南宁</option>
+                <option value="98">桂林</option>
+                <option value="99">百色</option>
+                <option value="100">北海</option>
+                <option value="101">崇左</option>
+                <option value="102">防城港</option>
+                <option value="103">贵港</option>
+                <option value="104">河池</option>
+                <option value="105">贺州</option>
+                <option value="106">来宾</option>
+                <option value="107">柳州</option>
+                <option value="108">钦州</option>
+                <option value="109">梧州</option>
+                <option value="110">玉林</option>
+                <option value="111">贵阳</option>
+                <option value="112">安顺</option>
+                <option value="113">毕节</option>
+                <option value="114">六盘水</option>
+                <option value="115">黔东南</option>
+                <option value="116">黔南</option>
+                <option value="117">黔西南</option>
+                <option value="118">铜仁</option>
+                <option value="119">遵义</option>
+                <option value="120">海口</option>
+                <option value="121">三亚</option>
+                <option value="122">白沙</option>
+                <option value="123">保亭</option>
+                <option value="124">昌江</option>
+                <option value="125">澄迈县</option>
+                <option value="126">定安县</option>
+                <option value="127">东方</option>
+                <option value="128">乐东</option>
+                <option value="129">临高县</option>
+                <option value="130">陵水</option>
+                <option value="131">琼海</option>
+                <option value="132">琼中</option>
+                <option value="133">屯昌县</option>
+                <option value="134">万宁</option>
+                <option value="135">文昌</option>
+                <option value="136">五指山</option>
+                <option value="137">儋州</option>
+                <option value="138">石家庄</option>
+                <option value="139">保定</option>
+                <option value="140">沧州</option>
+                <option value="141">承德</option>
+                <option value="142">邯郸</option>
+                <option value="143">衡水</option>
+                <option value="144">廊坊</option>
+                <option value="145">秦皇岛</option>
+                <option value="146">唐山</option>
+                <option value="147">邢台</option>
+                <option value="148">张家口</option>
+                <option value="149">郑州</option>
+                <option value="150">洛阳</option>
+                <option value="151">开封</option>
+                <option value="152">安阳</option>
+                <option value="153">鹤壁</option>
+                <option value="154">济源</option>
+                <option value="155">焦作</option>
+                <option value="156">南阳</option>
+                <option value="157">平顶山</option>
+                <option value="158">三门峡</option>
+                <option value="159">商丘</option>
+                <option value="160">新乡</option>
+                <option value="161">信阳</option>
+                <option value="162">许昌</option>
+                <option value="163">周口</option>
+                <option value="164">驻马店</option>
+                <option value="165">漯河</option>
+                <option value="166">濮阳</option>
+                <option value="167">哈尔滨</option>
+                <option value="168">大庆</option>
+                <option value="169">大兴安岭</option>
+                <option value="170">鹤岗</option>
+                <option value="171">黑河</option>
+                <option value="172">鸡西</option>
+                <option value="173">佳木斯</option>
+                <option value="174">牡丹江</option>
+                <option value="175">七台河</option>
+                <option value="176">齐齐哈尔</option>
+                <option value="177">双鸭山</option>
+                <option value="178">绥化</option>
+                <option value="179">伊春</option>
+                <option value="180">武汉</option>
+                <option value="181">仙桃</option>
+                <option value="182">鄂州</option>
+                <option value="183">黄冈</option>
+                <option value="184">黄石</option>
+                <option value="185">荆门</option>
+                <option value="186">荆州</option>
+                <option value="187">潜江</option>
+                <option value="188">神农架林区</option>
+                <option value="189">十堰</option>
+                <option value="190">随州</option>
+                <option value="191">天门</option>
+                <option value="192">咸宁</option>
+                <option value="193">襄樊</option>
+                <option value="194">孝感</option>
+                <option value="195">宜昌</option>
+                <option value="196">恩施</option>
+                <option value="197">长沙</option>
+                <option value="198">张家界</option>
+                <option value="199">常德</option>
+                <option value="200">郴州</option>
+                <option value="201">衡阳</option>
+                <option value="202">怀化</option>
+                <option value="203">娄底</option>
+                <option value="204">邵阳</option>
+                <option value="205">湘潭</option>
+                <option value="206">湘西</option>
+                <option value="207">益阳</option>
+                <option value="208">永州</option>
+                <option value="209">岳阳</option>
+                <option value="210">株洲</option>
+                <option value="211">长春</option>
+                <option value="212">吉林</option>
+                <option value="213">白城</option>
+                <option value="214">白山</option>
+                <option value="215">辽源</option>
+                <option value="216">四平</option>
+                <option value="217">松原</option>
+                <option value="218">通化</option>
+                <option value="219">延边</option>
+                <option value="220">南京</option>
+                <option value="221">苏州</option>
+                <option value="222">无锡</option>
+                <option value="223">常州</option>
+                <option value="224">淮安</option>
+                <option value="225">连云港</option>
+                <option value="226">南通</option>
+                <option value="227">宿迁</option>
+                <option value="228">泰州</option>
+                <option value="229">徐州</option>
+                <option value="230">盐城</option>
+                <option value="231">扬州</option>
+                <option value="232">镇江</option>
+                <option value="233">南昌</option>
+                <option value="234">抚州</option>
+                <option value="235">赣州</option>
+                <option value="236">吉安</option>
+                <option value="237">景德镇</option>
+                <option value="238">九江</option>
+                <option value="239">萍乡</option>
+                <option value="240">上饶</option>
+                <option value="241">新余</option>
+                <option value="242">宜春</option>
+                <option value="243">鹰潭</option>
+                <option value="244">沈阳</option>
+                <option value="245">大连</option>
+                <option value="246">鞍山</option>
+                <option value="247">本溪</option>
+                <option value="248">朝阳</option>
+                <option value="249">丹东</option>
+                <option value="250">抚顺</option>
+                <option value="251">阜新</option>
+                <option value="252">葫芦岛</option>
+                <option value="253">锦州</option>
+                <option value="254">辽阳</option>
+                <option value="255">盘锦</option>
+                <option value="256">铁岭</option>
+                <option value="257">营口</option>
+                <option value="258">呼和浩特</option>
+                <option value="259">阿拉善盟</option>
+                <option value="260">巴彦淖尔盟</option>
+                <option value="261">包头</option>
+                <option value="262">赤峰</option>
+                <option value="263">鄂尔多斯</option>
+                <option value="264">呼伦贝尔</option>
+                <option value="265">通辽</option>
+                <option value="266">乌海</option>
+                <option value="267">乌兰察布市</option>
+                <option value="268">锡林郭勒盟</option>
+                <option value="269">兴安盟</option>
+                <option value="270">银川</option>
+                <option value="271">固原</option>
+                <option value="272">石嘴山</option>
+                <option value="273">吴忠</option>
+                <option value="274">中卫</option>
+                <option value="275">西宁</option>
+                <option value="276">果洛</option>
+                <option value="277">海北</option>
+                <option value="278">海东</option>
+                <option value="279">海南</option>
+                <option value="280">海西</option>
+                <option value="281">黄南</option>
+                <option value="282">玉树</option>
+                <option value="283">济南</option>
+                <option value="284">青岛</option>
+                <option value="285">滨州</option>
+                <option value="286">德州</option>
+                <option value="287">东营</option>
+                <option value="288">菏泽</option>
+                <option value="289">济宁</option>
+                <option value="290">莱芜</option>
+                <option value="291">聊城</option>
+                <option value="292">临沂</option>
+                <option value="293">日照</option>
+                <option value="294">泰安</option>
+                <option value="295">威海</option>
+                <option value="296">潍坊</option>
+                <option value="297">烟台</option>
+                <option value="298">枣庄</option>
+                <option value="299">淄博</option>
+                <option value="300">太原</option>
+                <option value="301">长治</option>
+                <option value="302">大同</option>
+                <option value="303">晋城</option>
+                <option value="304">晋中</option>
+                <option value="305">临汾</option>
+                <option value="306">吕梁</option>
+                <option value="307">朔州</option>
+                <option value="308">忻州</option>
+                <option value="309">阳泉</option>
+                <option value="310">运城</option>
+                <option value="311">西安</option>
+                <option value="312">安康</option>
+                <option value="313">宝鸡</option>
+                <option value="314">汉中</option>
+                <option value="315">商洛</option>
+                <option value="316">铜川</option>
+                <option value="317">渭南</option>
+                <option value="318">咸阳</option>
+                <option value="319">延安</option>
+                <option value="320">榆林</option>
+                <option value="321">上海</option>
+                <option value="322">成都</option>
+                <option value="323">绵阳</option>
+                <option value="324">阿坝</option>
+                <option value="325">巴中</option>
+                <option value="326">达州</option>
+                <option value="327">德阳</option>
+                <option value="328">甘孜</option>
+                <option value="329">广安</option>
+                <option value="330">广元</option>
+                <option value="331">乐山</option>
+                <option value="332">凉山</option>
+                <option value="333">眉山</option>
+                <option value="334">南充</option>
+                <option value="335">内江</option>
+                <option value="336">攀枝花</option>
+                <option value="337">遂宁</option>
+                <option value="338">雅安</option>
+                <option value="339">宜宾</option>
+                <option value="340">资阳</option>
+                <option value="341">自贡</option>
+                <option value="342">泸州</option>
+                <option value="343">天津</option>
+                <option value="344">拉萨</option>
+                <option value="345">阿里</option>
+                <option value="346">昌都</option>
+                <option value="347">林芝</option>
+                <option value="348">那曲</option>
+                <option value="349">日喀则</option>
+                <option value="350">山南</option>
+                <option value="351">乌鲁木齐</option>
+                <option value="352">阿克苏</option>
+                <option value="353">阿拉尔</option>
+                <option value="354">巴音郭楞</option>
+                <option value="355">博尔塔拉</option>
+                <option value="356">昌吉</option>
+                <option value="357">哈密</option>
+                <option value="358">和田</option>
+                <option value="359">喀什</option>
+                <option value="360">克拉玛依</option>
+                <option value="361">克孜勒苏</option>
+                <option value="362">石河子</option>
+                <option value="363">图木舒克</option>
+                <option value="364">吐鲁番</option>
+                <option value="365">五家渠</option>
+                <option value="366">伊犁</option>
+                <option value="367">昆明</option>
+                <option value="368">怒江</option>
+                <option value="369">普洱</option>
+                <option value="370">丽江</option>
+                <option value="371">保山</option>
+                <option value="372">楚雄</option>
+                <option value="373">大理</option>
+                <option value="374">德宏</option>
+                <option value="375">迪庆</option>
+                <option value="376">红河</option>
+                <option value="377">临沧</option>
+                <option value="378">曲靖</option>
+                <option value="379">文山</option>
+                <option value="380">西双版纳</option>
+                <option value="381">玉溪</option>
+                <option value="382">昭通</option>
+                <option value="383">杭州</option>
+                <option value="384">湖州</option>
+                <option value="385">嘉兴</option>
+                <option value="386">金华</option>
+                <option value="387">丽水</option>
+                <option value="388">宁波</option>
+                <option value="389">绍兴</option>
+                <option value="390">台州</option>
+                <option value="391">温州</option>
+                <option value="392">舟山</option>
+                <option value="393">衢州</option>
+                <option value="394">重庆</option>
+                <option value="395">香港</option>
+                <option value="396">澳门</option>
+                <option value="397">台湾</option>
+                <option value="3401">合肥</option>
+            </select>
+        </div>
+        <div class="headseach"><a href="search.php?act=search"><img src="templates/images/index_sheach.png"/></a></div>
+    </div>
+</header>
+
+<nav class="ljnav">
+    <div class="ljnav-head">
+        <h1>分类</h1>
+        <span class="hidenav"></span>
+        <a class="searchbtn" href="search.php?act=search"></a>
+    </div>
+    <div class="leftnav">
+        <ul>
+            <li class="on"><img src="../data/images/cat/1481245194677920047.jpg" alt="水果"/>水果</li>
+            <li class="on"><img src="../data/images/cat/1481245552928102562.jpg" alt="蔬菜"/>蔬菜</li>
+            <li class="on"><img src="../data/images/cat/1481245285260569754.jpg" alt="肉类"/>肉类</li>
+            <li class="on"><img src="templates/images/1.png" alt="禽蛋"/>禽蛋</li>
+            <li class="on"><img src="../data/images/cat/1481245140553158438.jpg" alt="粮油调料"/>粮油调料</li>
+            <li class="on"><img src="templates/images/1.png" alt="海产冻品"/>海产冻品</li>
+            <li class="on"><img src="../data/images/cat/1480622512908289055.jpg" alt="休食酒水"/>休食酒水</li>
+            <li class="on"><img src="templates/images/1.png" alt="全球购"/>全球购</li>
+            <li class="on"><img src="templates/images/1.png" alt="营养配餐"/>营养配餐</li>
+            <li class="on"><img src="templates/images/1.png" alt="当季新品"/>当季新品</li>
+            <li class="on"><img src="templates/images/1.png" alt="其它"/>其它</li>
+            <li class="on"><img src="templates/images/1.png" alt="礼品套装"/>礼品套装</li>
+        </ul>
+    </div>
+    <div class="rightinfo">
+        <ul class="clearfix">
+            <li>
+                <a href="category.php?id=1008">
+                    <img src="../data/images/cat/" alt="进口水果"/>
+                    <p>进口水果</p>
+                </a>
+            </li>
+            <li>
+                <a href="category.php?id=1037">
+                    <img src="../data/images/cat/1481245213257214929.jpg" alt="新鲜水果"/>
+                    <p>新鲜水果</p>
+                </a>
+            </li>
+            <li>
+                <a href="category.php?id=1060">
+                    <img src="../data/images/cat/" alt="其它"/>
+                    <p>其它</p>
+                </a>
+            </li>
+        </ul>
+        <ul class="clearfix">
+            <li>
+                <a href="category.php?id=1015">
+                    <img src="../data/images/cat/1475199643291433666.png" alt="菌类"/>
+                    <p>菌类</p>
+                </a>
+            </li>
+            <li>
+                <a href="category.php?id=1017">
+                    <img src="../data/images/cat/" alt="叶菜"/>
+                    <p>叶菜</p>
+                </a>
+            </li>
+            <li>
+                <a href="category.php?id=1016">
+                    <img src="../data/images/cat/" alt="瓜果"/>
+                    <p>瓜果</p>
+                </a>
+            </li>
+            <li>
+                <a href="category.php?id=1018">
+                    <img src="../data/images/cat/" alt="豆类"/>
+                    <p>豆类</p>
+                </a>
+            </li>
+            <li>
+                <a href="category.php?id=1019">
+                    <img src="../data/images/cat/" alt="根茎"/>
+                    <p>根茎</p>
+                </a>
+            </li>
+        </ul>
+        <ul class="clearfix">
+            <li>
+                <a href="category.php?id=1021">
+                    <img src="../data/images/cat/" alt="牛羊肉"/>
+                    <p>牛羊肉</p>
+                </a>
+            </li>
+            <li>
+                <a href="category.php?id=1022">
+                    <img src="../data/images/cat/" alt="猪肉"/>
+                    <p>猪肉</p>
+                </a>
+            </li>
+            <li>
+                <a href="category.php?id=1046">
+                    <img src="../data/images/cat/" alt="鸡肉"/>
+                    <p>鸡肉</p>
+                </a>
+            </li>
+            <li>
+                <a href="category.php?id=1047">
+                    <img src="../data/images/cat/" alt="鱼肉"/>
+                    <p>鱼肉</p>
+                </a>
+            </li>
+        </ul>
+        <ul class="clearfix">
+            <li>
+                <a href="category.php?id=1024">
+                    <img src="../data/images/cat/1475199756651591424.png" alt="米面粮油"/>
+                    <p>米面粮油</p>
+                </a>
+            </li>
+            <li>
+                <a href="category.php?id=1028">
+                    <img src="../data/images/cat/" alt="调味品"/>
+                    <p>调味品</p>
+                </a>
+            </li>
+            <li>
+                <a href="category.php?id=1038">
+                    <img src="../data/images/cat/1481245329878200777.jpg" alt="南北干货"/>
+                    <p>南北干货</p>
+                </a>
+            </li>
+            <li>
+                <a href="category.php?id=1043">
+                    <img src="../data/images/cat/" alt="豆制品"/>
+                    <p>豆制品</p>
+                </a>
+            </li>
+            <li>
+                <a href="category.php?id=1049">
+                    <img src="../data/images/cat/" alt="香辛料"/>
+                    <p>香辛料</p>
+                </a>
+            </li>
+            <li>
+                <a href="category.php?id=1050">
+                    <img src="../data/images/cat/" alt="杂粮"/>
+                    <p>杂粮</p>
+                </a>
+            </li>
+            <li>
+                <a href="category.php?id=1054">
+                    <img src="../data/images/cat/" alt="大米"/>
+                    <p>大米</p>
+                </a>
+            </li>
+        </ul>
+        <ul class="clearfix">
+            <li>
+                <a href="category.php?id=1042">
+                    <img src="templates/images/typeimg01.png" alt="速冻面点"/>
+                    <p>速冻面点</p>
+                </a>
+            </li>
+            <li>
+                <a href="category.php?id=1048">
+                    <img src="templates/images/typeimg01.png" alt="海鲜"/>
+                    <p>海鲜</p>
+                </a>
+            </li>
+            <li>
+                <a href="category.php?id=1058">
+                    <img src="templates/images/typeimg01.png" alt="肉类冻品"/>
+                    <p>肉类冻品</p>
+                </a>
+            </li>
+        </ul>
+        <ul class="clearfix">
+            <li>
+                <a href="category.php?id=1030">
+                    <img src="../data/images/cat/" alt="坚果"/>
+                    <p>坚果</p>
+                </a>
+            </li>
+            <li>
+                <a href="category.php?id=1051">
+                    <img src="../data/images/cat/" alt="酒水"/>
+                    <p>酒水</p>
+                </a>
+            </li>
+            <li>
+                <a href="category.php?id=1053">
+                    <img src="../data/images/cat/" alt="休食"/>
+                    <p>休食</p>
+                </a>
+            </li>
+        </ul>
+        <ul class="clearfix">
+            <li>
+                <a href="category.php?id=1056">
+                    <img src="templates/images/typeimg01.png" alt="荤菜"/>
+                    <p>荤菜</p>
+                </a>
+            </li>
+            <li>
+                <a href="category.php?id=1057">
+                    <img src="templates/images/typeimg01.png" alt="素菜"/>
+                    <p>素菜</p>
+                </a>
+            </li>
+        </ul>
+    </div>
+</nav>
+<section>
+    <div class="index-wrapper">
+
+        <div class="swiper-container banner">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><a href='http://www.jiahe020.com/mobile/goods.php?id=955'><img src="../data/afficheimg/1505439130129308600.jpg" /></a></div>
+                <div class="swiper-slide"><a href='http://www.jiahe020.com/mobile/goods.php?id=956'><img src="../data/afficheimg/1505439073167139261.jpg" /></a></div>
+                <div class="swiper-slide"><a href='http://www.jiahe020.com/mobile/goods.php?id=906'><img src="../data/afficheimg/1505438977463431074.jpg" /></a></div>
+            </div>
+
+            <div class="swiper-pagination top_banner_pagination"></div>
+        </div>
+
+
+        <div class="menu">
+            <ul>
+                <li>
+                    <a href="category.php?id=1055">
+                        <img src="templates/images/a1.png"/>
+                        <span>营养配餐</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="promote.php?type=82">
+                        <img src="templates/images/a4.png"/>
+                        <span>每日抢购</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="category.php?id=1024">
+                        <img src="templates/images/a3.png"/>
+                        <span>新品上架</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="goods.php?id=344">
+                        <img src="templates/images/a2.png"/>
+                        <span>一键团购</span>
+                    </a>
+                </li>
+
+            </ul>
+        </div>
+
+
+        <div class="one">
+            <div class="swiper-container banner-one">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <a href='http://www.jiahe020.com/mobile/goods.php?id=1043'>
+                            <img src="../data/afficheimg/1505442505967715183.jpg" />
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href='http://www.jiahe020.com/mobile/goods.php?id=1041'>
+                            <img src="../data/afficheimg/1505442464006240208.jpg" />
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href='http://www.jiahe020.com/mobile/goods.php?id=932'>
+                            <img src="../data/afficheimg/1505442336005680004.jpg" />
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href='http://www.jiahe020.com/mobile/goods.php?id=847'>
+                            <img src="../data/afficheimg/1505442222987629041.jpg" />
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href='http://www.jiahe020.com/mobile/goods.php?id=762'>
+                            <img src="../data/afficheimg/1505440676657686915.jpg" />
+                        </a>
+                    </div>
+                </div>
+
+                <div class="swiper-pagination top_banner_pagination"></div>
+            </div>
+        </div>
+
+
+        <div class="banner-two swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><a href='http://www.jiahe020.com/mobile/goods.php?id=1002'><img src="../data/afficheimg/1505669856850920022.jpg" /></a></div>
+                <div class="swiper-slide"><a href='http://www.jiahe020.com/mobile/goods.php?id=1008'><img src="../data/afficheimg/1505669679294717615.jpg" /></a></div>
+            </div>
+
+            <div class="swiper-pagination top_banner_pagination"></div>
+        </div>
+
+        <div class="more">
+            <a href="promote.php?type=81">更多专题</a>
+        </div>
+
+
+        <div class="pic-only">
+            <a href="javascript:"><img src="../data/afficheimg/1503943650105819329.png"/></a>
+        </div>
+
+
+        <div class="box">
+            <div class="title">
+                <div class="title-left">
+                    <img src="templates/images/b1.png"/>
+                    <span>新鲜水果</span>
+                </div>
+                <a href="category.php?id=1000">更多+</a>
+            </div>
+            <div class="box-pic">
+                <div class="swiper-container boxslide">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <a href="goods.php?id=877">
+                                <img src="../images/201708/thumb_img/877_thumb_G_1502134741652.jpg" />
+                                <p>越南红心火龙果 约 0.5kg</p>
+                                <span>¥10.00/个</span>
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="goods.php?id=817">
+                                <img src="../images/201708/thumb_img/817_thumb_G_1501786409897.jpg" />
+                                <p>新疆马奶提 葡萄  0.5kg</p>
+                                <span>¥6.80/斤</span>
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="goods.php?id=977">
+                                <img src="../images/201708/thumb_img/977_thumb_G_1503538119697.jpg" />
+                                <p>陕西嘎啦苹果 约0.5kg</p>
+                                <span>¥5.50/斤</span>
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="goods.php?id=903">
+                                <img src="../images/201708/thumb_img/903_thumb_G_1502135923213.jpg" />
+                                <p>本地巨峰葡萄 0.5kg</p>
+                                <span>¥4.90/斤</span>
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="goods.php?id=942">
+                                <img src="../images/201708/thumb_img/942_thumb_G_1502212439743.jpg" />
+                                <p>陕西脆甜冬枣 约0.5kg</p>
+                                <span>¥6.80/斤</span>
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="goods.php?id=208">
+                                <img src="../images/201708/thumb_img/208_thumb_G_1501787396815.jpg" />
+                                <p>新疆哈蜜瓜约2.5kg</p>
+                                <span>¥19.80/个</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="pic-only">
+            <a href="javascript:"><img src="../data/afficheimg/1503943854469752722.png"/></a>
+        </div>
+
+
+        <div class="box">
+            <div class="title">
+                <div class="title-left">
+                    <img src="templates/images/b1.png"/>
+                    <span>田园蔬菜</span>
+                </div>
+                <a href="category.php?id=1001">更多+</a>
+            </div>
+            <div class="box-pic">
+                <div class="swiper-container boxslide">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <a href="goods.php?id=999">
+                                <img src="../images/201709/thumb_img/999_thumb_G_1504573273643.jpg" />
+                                <p>蟹味菇 约130g</p>
+                                <span>¥3.50/份</span>
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="goods.php?id=249">
+                                <img src="../images/201708/thumb_img/249_thumb_G_1502217718307.jpg" />
+                                <p>大青椒 约300g</p>
+                                <span>¥1.80/300g/份</span>
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="goods.php?id=283">
+                                <img src="../images/201708/thumb_img/283_thumb_G_1502316239080.jpg" />
+                                <p>豌豆米 约200g</p>
+                                <span>¥3.60/200g/份</span>
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="goods.php?id=278">
+                                <img src="../images/201708/thumb_img/278_thumb_G_1502314594991.jpg" />
+                                <p>四季豆 约300g</p>
+                                <span>¥3.60/300g/份</span>
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="goods.php?id=182">
+                                <img src="../images/201708/thumb_img/182_thumb_G_1504131632185.jpg" />
+                                <p>西兰花 约500g</p>
+                                <span>¥6.20/500g/份</span>
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="goods.php?id=251">
+                                <img src="../images/201708/thumb_img/251_thumb_G_1502218143256.jpg" />
+                                <p>冬瓜 约500g</p>
+                                <span>¥1.30/500g/份</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="pic-only">
+            <a href="javascript:"><img src="../data/afficheimg/1504563006120574553.png"/></a>
+        </div>
+
+
+        <div class="box">
+            <div class="title">
+                <div class="title-left">
+                    <img src="templates/images/b1.png"/>
+                    <span>肉禽蛋品</span>
+                </div>
+                <a href="category.php?id=1002">更多+</a>
+            </div>
+            <div class="box-pic">
+                <div class="swiper-container boxslide">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <a href="goods.php?id=952">
+                                <img src="../images/201708/thumb_img/952_thumb_G_1502402814534.jpg" />
+                                <p>恒都 半筋半肉1kg</p>
+                                <span>¥65.00/份</span>
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="goods.php?id=192">
+                                <img src="../images/201708/thumb_img/192_thumb_G_1504045762947.jpg" />
+                                <p>精五花肉 约0.5kg</p>
+                                <span>¥17.80/份</span>
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="goods.php?id=193">
+                                <img src="../images/201706/thumb_img/193_thumb_G_1498155148752.jpg" />
+                                <p>精排骨 约0.5kg</p>
+                                <span>¥22.00/份</span>
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="goods.php?id=679">
+                                <img src="../images/201708/thumb_img/679_thumb_G_1502841200142.jpg" />
+                                <p>精品 猪蹄猪脚 约0.9kg</p>
+                                <span>¥27.80/份</span>
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="goods.php?id=664">
+                                <img src="../images/201708/thumb_img/664_thumb_G_1502836402488.jpg" />
+                                <p>山东鸡翅中（泰森）1kg</p>
+                                <span>¥58.00/袋</span>
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="goods.php?id=665">
+                                <img src="../images/201708/thumb_img/665_thumb_G_1502829226796.jpg" />
+                                <p>猪肉棒骨 约0.5kg</p>
+                                <span>¥11.90/份</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="pic-only">
+            <a href="javascript:"><img src="../data/afficheimg/1503943901736646588.png"/></a>
+        </div>
+
+
+        <div class="box">
+            <div class="title">
+                <div class="title-left">
+                    <img src="templates/images/b1.png"/>
+                    <span>酒水干货</span>
+                </div>
+                <a href="category.php?id=1003">更多+</a>
+            </div>
+            <div class="box-pic">
+                <div class="swiper-container boxslide">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <a href="goods.php?id=940">
+                                <img src="../images/201708/thumb_img/940_thumb_G_1502231820551.jpg" />
+                                <p>2013法国进口花悦城堡红酒750ml</p>
+                                <span>¥666.00/瓶/750ml</span>
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="goods.php?id=936">
+                                <img src="../images/201708/thumb_img/936_thumb_G_1502063360980.jpg" />
+                                <p>迎丰瓜子袋装 焦糖味 219g</p>
+                                <span>¥9.80/袋</span>
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="goods.php?id=986">
+                                <img src="../images/201708/thumb_img/986_thumb_G_1504118624534.jpg" />
+                                <p>德国领鹰黑啤500ml</p>
+                                <span>¥9.00/罐</span>
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="goods.php?id=697">
+                                <img src="../images/201708/thumb_img/697_thumb_G_1504052427456.jpg" />
+                                <p>夏威夷果（大） 200g</p>
+                                <span>¥15.00/份</span>
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="goods.php?id=689">
+                                <img src="../images/201708/thumb_img/689_thumb_G_1504144337893.jpg" />
+                                <p>开心果 200g</p>
+                                <span>¥19.80/份</span>
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="goods.php?id=690">
+                                <img src="../images/201708/thumb_img/690_thumb_G_1504143697020.jpg" />
+                                <p>杏仁 200G</p>
+                                <span>¥14.00/200克/份</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<footer>
+    <div class="foot">
+        <p>备案号：蜀ICP备16020980号-2</p>
+    </div>
+    <div class="common-foot" id="common-footer">
+        <ul>
+            <li>
+                <a href="index.php">
+                    <img src="templates/images/i1.png"/>
+                    <span>首页</span>
+                </a>
+            </li>
+            <li>
+                <a href="category.php">
+                    <img src="templates/images/i2.png"/>
+                    <span>分类</span>
+                </a>
+            </li>
+            <li>
+                <a href="flow.php">
+                    <img src="templates/images/i3.png"/>
+                    <span>购物车</span>
+                </a>
+            </li>
+            <li>
+                <a href="user.php">
+                    <img src="templates/images/i4.png"/>
+                    <span>个人中心</span>
+                </a>
+            </li>
+        </ul>    </div>
+</footer>
+<script src="js/jQuery/jquery-1.9.1.min.js"></script>
+<script src="swiper/swiper-3.4.2.jquery.min.js"></script>
+<script src="js/common.js"></script>
+<script>
+    //==========自适应banner==========
+    var swiper = new Swiper('.banner', {
+        autoplay: 3000,
+        loop : true,
+        pagination: '.top_banner_pagination',
+        paginationClickable: true,
+        //nextButton: '.swiper-button-next',
+        //prevButton: '.swiper-button-prev',
+        autoplayDisableOnInteraction : false,
+        debugger: true,
+        speed:800
+    });
+
+    //var swiper = new Swiper('.banner-one', {loop : true, speed:800,slidesPerView : 'auto'});
+    var swiper = new Swiper('.banner-one', {slidesPerView: 2.5, speed:800});
+    var swiper = new Swiper('.banner-two', {loop : true, pagination: '.top_banner_pagination', paginationClickable:true, speed:800});
+    var swiper = new Swiper('.boxslide', {slidesPerView: 2.5, speed:800});
+
+</script>
+<script type="text/javascript">
+    var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+    document.write(unescape("%3Cspan id='cnzz_stat_icon_1262996229'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s22.cnzz.com/z_stat.php%3Fid%3D1262996229' type='text/javascript'%3E%3C/script%3E"));
+</script>
+</body>
+</html>

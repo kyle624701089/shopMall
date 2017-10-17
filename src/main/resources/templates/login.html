@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+    <head th:include="common">
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=640,maximum-scale=2.0,user-scalable=no,target-densitydpi=device-dpi"/>
+        <meta name="applicable-devive" content="mobile"/>
+        <meta content="yes" name="apple-mobile-web-app-capable"/>
+        <meta name="format-detection" content="telephone=no,email=no,adress=no"/>
+        <title>登录页面</title>
+    </head>
+    <body>
+        <!--头部-->
+        <div class="center">
+            <h1>
+                <i class="ace-icon fa fa-leaf green"></i>
+                <span class="red">My</span>
+                <span class="white" id="id-text2">Company</span>
+            </h1>
+            <h4 class="blue" id="id-company-text">&copy; 不得了</h4>
+        </div>
+        <div class="space-6"></div>
+
+        <!--登录框-->
+        <div class="position-relative">
+            <div id="login-box" class="login-box visible widget-box no-border">
+                <div class="widget-body">
+                    <div class="widget-main">
+                        <h4 class="header blue lighter bigger">
+                            <i class="ace-icon fa fa-coffee green"></i>欢迎登录
+                        </h4>
+                        <div class="space-6"></div>
+                        <form th:id="loginForm" th:action="main" th:method="post">
+                            <fieldset>
+                                <label class="block clearfix">
+                                    <span class="block input-icon input-icon-right">
+                                        <input type="text" class="form-control" placeholder="用户名" th:id="username" th:name="username"/>
+                                        <i class="ace-icon fa fa-user"></i>
+                                    </span>
+                                </label>
+                                <div id="usernameLabel"></div>
+                                <label class="block clearfix">
+                                    <span class="block input-icon input-icon-right">
+                                        <input type="password" class="form-control" placeholder="密码" th:id="password" th:name="password"/>
+                                        <i class="ace-icon fa fa-lock"></i>
+                                    </span>
+                                </label>
+                                <div id="passwordLabel"></div>
+                                <div id="errorLabel"></div>
+                                <div class="space"></div>
+                                <div class="clearfix">
+                                    <label class="inline">
+                                        <input type="checkbox" class="ace" />
+                                        <span class="lbl">记住我</span>
+                                    </label>
+                                    <button type="button" class="width-35 pull-right btn btn-sm btn-primary" onclick="login()" >
+                                        <i class="ace-icon fa fa-key"></i>
+                                        <span class="bigger-110">登录</span>
+                                    </button>
+                                </div>
+                                <div class="space-4"></div>
+                            </fieldset>
+                        </form>
+                        <div class="social-or-login center">
+                            <span class="bigger-110">使用其他方式登录</span>
+                        </div>
+                        <div class="space-6"></div>
+                        <div class="social-login center">
+                            <a class="btn btn-primary">
+                                <i class="ace-icon fa fa-facebook"></i>
+                            </a>
+                            <a class="btn btn-info">
+                                <i class="ace-icon fa fa-twitter"></i>
+                            </a>
+                            <a class="btn btn-danger">
+                                <i class="ace-icon fa fa-google-plus"></i>
+                            </a>
+                        </div>
+                    </div><!-- /.widget-main -->
+
+                    <div class="toolbar clearfix">
+                        <div>
+                            <a href="#" data-target="#forgot-box" class="forgot-password-link" id="forget">
+                                <i class="ace-icon fa fa-arrow-left"></i>忘记密码？
+                            </a>
+                        </div>
+                        <div>
+                            <a href="javascript:registerPage()" data-target="#signup-box" class="user-signup-link" >
+                               	注册<i class="ace-icon fa fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div><!-- /.widget-body -->
+            </div><!-- /.login-box -->
+
+            <div id="signup-box" class="signup-box widget-box no-border" style="display: none" >
+                <div class="widget-body">
+                    <div class="widget-main">
+                        <h4 class="header green lighter bigger">
+                            <i class="ace-icon fa fa-users blue"></i>注册用户
+                        </h4>
+                        <div class="space-6"></div>
+                        <p> 请输入下列信息: </p>
+
+                        <form th:id="registerForm" th:action="register" th:method="post">
+                            <fieldset>
+                                <label class="block clearfix">
+                                    <span class="block input-icon input-icon-right">
+                                        <input type="text" class="form-control" placeholder="用户名" th:id="username_reg"/>
+                                        <i class="ace-icon fa fa-user"></i>
+                                    </span>
+                                </label>
+                                <span th:id="usernameNullError"></span>
+
+                                <label class="block clearfix">
+                                    <span class="block input-icon input-icon-right">
+                                        <input type="password" class="form-control" placeholder="密码" th:id="password_reg"/>
+                                        <i class="ace-icon fa fa-lock"></i>
+                                    </span>
+                                </label>
+                                <span th:id="passwordNullError"></span>
+
+                                <label class="block clearfix">
+                                    <span class="block input-icon input-icon-right">
+                                        <input type="password" class="form-control" placeholder="确认密码" th:id="rePassword_reg"/>
+                                        <i class="ace-icon fa fa-retweet"></i>
+                                    </span>
+                                </label>
+                                <span th:id="rePasswordNullError"></span>
+
+                                <label class="block clearfix">
+                                    <span class="block input-icon input-icon-right">
+                                        <input type="email" class="form-control" placeholder="邮箱" th:id="email_reg"/>
+                                        <i class="ace-icon fa fa-envelope"></i>
+                                    </span>
+                                </label>
+                                <span th:id="emailNullError"></span>
+
+                                <label class="block">
+                                    <input type="checkbox" class="ace" th:id="readCheck" onchange="showRegiste()"/>
+                                <span class="lbl">我已阅读
+                                    <a href="#">《用户指南》</a>
+                                </span>
+                                </label>
+
+                                <div class="space-24"></div>
+
+                                <div class="clearfix">
+                                    <button type="button" class="width-30 pull-left btn btn-sm" onclick="resetForm()">
+                                        <i class="ace-icon fa fa-refresh"></i>
+                                        <span class="bigger-110">重置</span>
+                                    </button>
+
+                                    <button th:id="registeButton" type="button" th:disabled="disabled" class="width-65 pull-right btn btn-sm btn-success" onclick="register()">
+                                        <span class="bigger-110">注册</span>
+                                        <i class="ace-icon fa fa-arrow-right icon-on-right"></i>
+                                    </button>
+                                </div>
+                            </fieldset>
+                        </form>
+                    </div>
+
+                    <div class="toolbar center">
+                        <a href="javascript:backLoginPage()" data-target="#login-box" class="back-to-login-link">
+                            <i class="ace-icon fa fa-arrow-left"></i>返回登陆
+                        </a>
+                    </div>
+                </div><!-- /.widget-body -->
+            </div><!-- /.signup-box -->
+        </div><!-- /.position-relative -->
+    </body>
+	<script type="text/javascript" src="/js/login.js"></script>
+</html>

@@ -1,0 +1,309 @@
+/********首页开始*******/
+/*头部*/
+.index {
+    width: 640px;
+    height: 60px;
+    border-bottom: 0;
+}
+
+.index-header {
+    width: 600px;
+    height: 60px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.index-header .headmenu {
+    width: 34px;
+    height: 60px;
+    float: left;
+}
+
+.index-header .headmenu img {
+    margin-top: 19px;
+}
+
+.index-header .headseach {
+    width: 28px;
+    height: 60px;
+    float: right;
+}
+
+.index-header .headseach img {
+    margin-top: 16px;
+}
+
+.index-header .headmdue {
+    position: absolute;
+    top: 10px;
+    height: 40px;
+    left: 221px;
+    width: 158px;
+}
+
+.index-header .headselect {
+    position: absolute;
+    left: 395px;
+    top: 15px;
+    height: 30px;
+    line-height: 30px;
+}
+
+.index-header .headselect select {
+    font-size: 22px;
+    color: #999;
+    line-height: 30px;
+    height: 30px;
+    border: 0;
+}
+
+/*切换图*/
+.banner .swiper-pagination-bullet {
+    width: 8px !important;
+    height: 8px !important;
+    background: none !important;
+    border: 2px solid #fff;
+    border-radius: 25%;
+    box-sizing: content-box;
+    opacity: 0.9;
+    margin: 0 20px !important;
+}
+
+.banner .swiper-pagination-bullet-active {
+    background: #FFF !important;
+}
+
+/*首页菜单*/
+.index-wrapper .menu {
+    width: 100%;
+    height: 125px;
+    margin: 0 auto;
+}
+
+.index-wrapper .menu ul li {
+    width: 160px;
+    height: 125px;
+    float: left;
+    text-align: center;
+}
+
+.index-wrapper .menu ul li img {
+    display: block;
+    width: 42px;
+    height: 42px;
+    margin: 23px auto 0;
+}
+
+.index-wrapper .menu ul li span {
+    display: inline-block;
+    line-height: 45px;
+    font-size: 21px;
+    font-weight: 600;
+}
+
+.index-wrapper .menu ul li:first-child span {
+    color: #67ac4a;
+}
+
+.index-wrapper .menu ul li:nth-child(2) span {
+    color: #fe5927;
+}
+
+.index-wrapper .menu ul li:nth-child(3) span {
+    color: #4e77af;
+}
+
+.index-wrapper .menu ul li:nth-child(4) span {
+    color: #e5b300;
+}
+
+/*推荐滑动广告*/
+.index-wrapper .one {
+    width: 100%;
+    height: 180px;
+    overflow: hidden;
+    background-color: #fcfcfc;
+}
+
+.index-wrapper .one .swiper-slide {
+    width: 185px !important;
+    height: auto;
+}
+
+.index-wrapper .one .swiper-slide img {
+    width: 180px;
+    height: 180px;
+    display: block;
+    box-shadow: 2px 0 3px #e6e6e6;
+}
+
+.index-wrapper .one .swiper-slide .text {
+    position: absolute;
+    left: 40px;
+    width: 280px;
+    height: 155px;
+    top: 40px;
+    left: 40px;
+}
+
+.index-wrapper .one .swiper-slide .text h3 {
+    font-family: 微软雅黑;
+    font-weight: bold;
+    line-height: 30px;
+    color: #666;
+}
+
+.index-wrapper .one .swiper-slide .text span {
+    font-family: 微软雅黑;
+    line-height: 40px;
+    font-size: 20px;
+    color: #666;
+}
+
+.index-wrapper .one .swiper-slide .text .monery {
+    display: inline-block;
+    background-color: #e5b300;
+    font-family: 微软雅黑;
+    color: #FFF;
+    font-size: 22px;
+    padding: 10px 25px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+.index-wrapper .one .swiper-slide .text .monery b {
+    color: #FFF;
+}
+
+.index-wrapper .one .swiper-slide:nth-child(even) .text .monery {
+    background-color: #67ac4a;
+}
+
+/*偶数、单数odd*/
+
+/*banner展示广告*/
+.index-wrapper .banner-two {
+    width: 640px;
+    height: 420px;
+    overflow: hidden;
+    box-shadow: 0px 0px 5px #e6e6e6;
+}
+
+.index-wrapper .banner-two .swiper-pagination-bullet {
+    width: 8px !important;
+    height: 8px !important;
+    background: none !important;
+    border: 2px solid #67ac4a;
+    border-radius: 25%;
+    box-sizing: content-box;
+    opacity: 0.9;
+    margin: 0 20px !important;
+}
+
+.index-wrapper .banner-two .swiper-pagination-bullet-active {
+    background: #67ac4a !important;
+}
+
+.index-wrapper .more {
+    width: 100%;
+    height: 75px;
+    margin-top: 25px;
+}
+
+.index-wrapper .more a {
+    width: 150px;
+    height: 46px;
+    line-height: 46px;
+    text-align: center;
+    display: block;
+    border: 2px solid #efd166;
+    margin: 0 auto;
+    font-size: 21px;
+    color: #e5b300;
+}
+
+/*一张图片展示广告*/
+.index-wrapper .pic-only {
+    width: 100%;
+    height: 230px;
+    background-color: #f8f6f7;
+    border-top: 4px solid #eaf8e4;
+    border-bottom: 4px solid #eaf8e4;
+    position: relative;
+}
+
+.index-wrapper .pic-only img {
+    width: 100%;
+    height: 220px;
+    position: absolute;
+    bottom: 0;
+}
+
+/*新鲜水果*/
+.index-wrapper .box {
+    width: 100%;
+    height: 485px;
+}
+
+.index-wrapper .box .title {
+    width: 600px;
+    height: 85px;
+    margin: 0 auto;
+}
+
+.index-wrapper .box .title a {
+    font-weight: 600;
+    float: right;
+    line-height: 85px;
+    color: #67ac4a;
+    font-size: 18px;
+}
+
+.index-wrapper .box .title .title-left {
+    float: left;
+    height: 45px;
+    line-height: 45px;
+    margin-top: 20px;
+}
+
+.index-wrapper .box .title .title-left img {
+    float: left;
+    margin-right: 15px;
+}
+
+.index-wrapper .box .title .title-left span {
+    float: left;
+    color: #67ac4a;
+    font-weight: 600;
+}
+
+.index-wrapper .box .box-pic {
+    width: 640px;
+    height: 400px;
+    margin: 0 auto;
+}
+
+.index-wrapper .box .box-pic img {
+    width: 238px;
+    height: 238px;
+    display: block;
+}
+
+.index-wrapper .box .box-pic p {
+    width: 238px;
+    text-align: center;
+    display: inline-block;
+    line-height: 60px;
+    height: 60px;
+    overflow: hidden;
+}
+
+.index-wrapper .box .box-pic span {
+    width: 238px;
+    text-align: center;
+    display: inline-block;
+    line-height: 80px;
+    color: #e5b300;
+    overflow: hidden;
+    font-weight: 600;
+}

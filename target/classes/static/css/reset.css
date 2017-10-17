@@ -1,0 +1,122 @@
+body, button, input, select, textarea, h1, h2, h3, h4, h5, h6, dl, dt, dd {
+    font-family: 'Static-Bold', 'Microsoft Yahei', 'Hiragino Sans GB', 'Arial', 'sans-serif';
+    font-weight: normal;
+    font-size: 24px;
+    padding: 0;
+    margin: 0;
+}
+
+article, aside, details, figcaption, figure, footer, header, main, nav, section, summary {
+    display: block;
+}
+
+*, *:before, *:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+figure, p, ul, div {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: #999;
+}
+
+button, a, p {
+    -webkit-tap-highlight-color: rgba(255, 255, 255, 0.1);
+    color: #333;
+}
+
+li {
+    list-style: none;
+}
+
+body {
+    background-color: #FFF;
+    width: 640px;
+    margin: 0 auto;
+    position: relative;
+}
+
+input {
+    padding-left: 15px;
+    border: 1px solid #e6e6e6;
+}
+
+img {
+    border: 0;
+    outline-width: 0px;
+    vertical-align: top;
+}
+
+.none {
+    display: none;
+}
+
+i {
+    font-style: normal
+}
+
+.clearfix:after {
+    height: 0;
+    content: "";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    font-size: 0;
+}
+
+.clearfix {
+    zoom: 1;
+}
+
+/****瀹炵敤鐨勫垵濮嬪寲****/
+h1 {
+    font-size: 34px;
+}
+
+h2 {
+    font-size: 30px;
+}
+
+h3 {
+    font-size: 28px;
+}
+
+h4 {
+    font-size: 26px;
+}
+
+h5 {
+    font-size: 24px;
+}
+
+h6 {
+    font-size: 20px;
+}
+
+p {
+    color: #333;
+}
+
+b {
+    font-weight: bold;
+}
+
+input:focus {
+    border: 1px solid #80b967 !important;
+    outline: medium;
+}
+
+textarea {
+    text-indent: 2em;
+    line-height: 28px;
+    overflow: auto;
+    resize: none;
+    padding: 10px;
+    color: #999;
+}

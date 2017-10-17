@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta http-equiv="content-type" content="text/html;charset=UTF-8"/>
+        <title>user信息展示页面</title>
+        <link rel="stylesheet" href="js/jQuery/jquery-ui-1.12.1.custom/jquery-ui.min.css" />
+        <script src="js/jQuery/jquery-1.9.1.min.js"></script>
+        <script src="js/jQuery/jquery-ui-1.12.1.custom/jquery-ui.js"></script>
+        <link rel="stylesheet" href="http://jqueryui.com/resources/demos/style.css" />
+    </head>
+    <body>
+        <table align="center" border="1" cellspacing="1" style="border-collapse: collapse;border-style: solid;">
+            <tr>
+                <th>id</th>
+                <th>姓名</th>
+                <th>密码</th>
+                <th>操作</th>
+            </tr>
+            <tr th:each="user : ${userList}">
+                <td th:text="${user.id}" class="id">id</td>
+                <td th:text="${user.name}">name</td>
+                <td th:text="${user.password}">password</td>
+                <td>
+                    <button onclick="deleteUser(this)">删除</button>
+                </td>
+            </tr>
+        </table>
+
+        <!--删除确认模态框-->
+        <div id="dialog-confirm" hidden="hidden" title="删除数据？" >
+            <p>
+                <span class="ui-icon ui-icon-alert" style="float:left; margin:0 7px 20px 0;"></span>
+                是否删除该数据？
+            </p>
+        </div>
+    </body>
+</html>
