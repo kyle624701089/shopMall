@@ -13,7 +13,6 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import cn.kyle.shoppingMall.domain.User;
-import cn.kyle.shoppingMall.utils.CommonUtil;
 
 /**
  * Created by Administrator on 2017/9/21.
@@ -49,13 +48,8 @@ public class MyFilter implements Filter {
         System.out.println(requestURI);
         User user_in_session = (User)session.getAttribute("USER_IN_SESSION");
         System.out.println("user:"+user_in_session.toString());
-        if (user_in_session !=null || CommonUtil.passURIs.contains(requestURI)){
-            //如果session中包含了user或者请求路径是登录、验证等，直接放过
-            filterChain.doFilter(servletRequest,servletResponse);
-        }else{
-            //重定向到登录页面
-            response.sendRedirect(request.getContextPath()+ CommonUtil.loginURI);
-        }
+        //如果session中包含了user或者请求路径是登录、验证等，直接放过
+		filterChain.doFilter(servletRequest,servletResponse);
     }
 
     @Override

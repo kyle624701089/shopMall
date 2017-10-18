@@ -1,14 +1,19 @@
 package cn.kyle.shoppingMall.controller;
 
+import java.util.List;
+
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import cn.kyle.shoppingMall.domain.Product;
 import cn.kyle.shoppingMall.domain.User;
+import cn.kyle.shoppingMall.mapper.ProductMapper;
 import cn.kyle.shoppingMall.mapper.UserMapper;
 
 /**
@@ -19,6 +24,9 @@ public class LoginContoller extends BaseController{
 
     @Resource
     private UserMapper userMapper;
+    
+    @Resource
+    private ProductMapper productMapper;
 
     /**
      * 跳转到登录页面
@@ -53,8 +61,10 @@ public class LoginContoller extends BaseController{
      * @return
      */
     @RequestMapping(value = "/main",method = RequestMethod.POST)
-    public String main(HttpServletRequest request){
+    public String main(HttpServletRequest request,ModelMap modelMap){
         request.getSession().setAttribute("USER_IN_SESSION",getUser(request));
+        List<Product> productList = productMapper.findAllProduct();
+		modelMap.addAttribute("productList", productList);
         return "main";
     }
 }

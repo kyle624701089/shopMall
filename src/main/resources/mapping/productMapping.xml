@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.kyle.shoppingMall.mapper.ProductMapper">
+
+    <resultMap id="productMap" type="cn.kyle.shoppingMall.domain.Product">
+        <result property="id" column="ID" jdbcType="VARCHAR"/>
+        <result property="name" column="NAME" jdbcType="VARCHAR"/>
+        <result property="intro" column="INTRO" jdbcType="VARCHAR"/>
+        <result property="time" column="TIME" jdbcType="INTEGER"/>
+        <result property="opeType" column="OPETYPE" jdbcType="VARCHAR"/>
+        <result property="paiedCount" column="PAIEDCOUNT" jdbcType="INTEGER"/>
+        <result property="price" column="PRICE" jdbcType="INTEGER"/>
+    </resultMap>
+
+    <select id="findAllProduct" resultMap="productMap">
+        SELECT * FROM product
+    </select>
+
+</mapper>
