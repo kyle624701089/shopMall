@@ -8,6 +8,8 @@
 */ 
 package cn.kyle.shoppingMall.domain;
 
+import java.io.Serializable;
+
 /**
  * @ClassName：Product
  * @Description：产品
@@ -16,14 +18,19 @@ package cn.kyle.shoppingMall.domain;
  * @date 2017年10月18日 下午8:10:40
  */
 
-public class Product {
+public class Product implements Serializable{
+	/** 
+	* @Fields serialVersionUID : TODO(用一句话描述这个变量表示什么) 
+	*/ 
+	private static final long serialVersionUID = 1L;
 	private String id;
 	private String name;//产品名称
 	private String intro;//产品介绍
-	private Integer time;//操作时间(分钟)
+	private String duration;//操作时长(分钟)
 	private String opeType;//操作方式(卧姿，站姿，坐姿...)
-	private Integer paiedCount;//(已付款人数)
-	private Integer price;//价格
+	private String paiedCount;//(已付款人数)
+	private String price;//价格
+	private String productType;//产品分类：1:中医推拿;2:足疗SPA;3:女性·小儿
 	public String getId() {
 		return id;
 	}
@@ -42,11 +49,11 @@ public class Product {
 	public void setIntro(String intro) {
 		this.intro = intro;
 	}
-	public Integer getTime() {
-		return time;
+	public String getDuration() {
+		return duration;
 	}
-	public void setTime(Integer time) {
-		this.time = time;
+	public void setDuration(String duration) {
+		this.duration = duration;
 	}
 	public String getOpeType() {
 		return opeType;
@@ -54,21 +61,27 @@ public class Product {
 	public void setOpeType(String opeType) {
 		this.opeType = opeType;
 	}
-	public Integer getPaiedCount() {
+	public String getPaiedCount() {
 		return paiedCount;
 	}
-	public void setPaiedCount(Integer paiedCount) {
+	public void setPaiedCount(String paiedCount) {
 		this.paiedCount = paiedCount;
 	}
-	public Integer getPrice() {
+	public String getPrice() {
 		return price;
 	}
-	public void setPrice(Integer price) {
+	public void setPrice(String price) {
 		this.price = price;
+	}
+	public String getProductType() {
+		return productType;
+	}
+	public void setProductType(String productType) {
+		this.productType = productType;
 	}
 	@Override
 	public String toString() {
-		return "Product [id=" + id + ", name=" + name + ", intro=" + intro + ", time=" + time + ", opeType=" + opeType
-				+ ", paiedCount=" + paiedCount + ", price=" + price + "]";
+		return "Product [id=" + id + ", name=" + name + ", intro=" + intro + ", duration=" + duration + ", opeType="
+				+ opeType + ", paiedCount=" + paiedCount + ", price=" + price + ", productType=" + productType + "]";
 	}
 }

@@ -1,11 +1,18 @@
 package cn.kyle.shoppingMall.domain;
 
+import java.io.Serializable;
+
 /**
  * Created by Administrator on 2017/9/14.
  */
-public class User {
+public class User implements Serializable{
 
-    private String id;
+    /** 
+	* @Fields serialVersionUID : TODO(用一句话描述这个变量表示什么) 
+	*/ 
+	private static final long serialVersionUID = 1L;
+
+	private String id;
 
     private String username;
 
