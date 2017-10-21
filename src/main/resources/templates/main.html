@@ -63,73 +63,14 @@
 		    <!-- 这里是页面内容区 -->
 		    <div class="page-index">
 		    	<div class="buttons-tab">
-				    <a href="#tab1" class="tab-link active button" th:onclick="'getProductList(this)'" th:id="null">全部项目</a>
-				    <a href="#tab2" class="tab-link button" th:onclick="'getProductList(this)'" th:id="1">中医推拿</a>
-				    <a href="#tab3" class="tab-link button" th:onclick="'getProductList(this)'" th:id="2">足疗SPA</a>
-				    <a href="#tab4" class="tab-link button" th:onclick="'getProductList(this)'" th:id="3">女性·小儿</a>
+				    <a href="#tab" class="tab-link active button" th:onclick="'getProductList(this)'" th:id="null">全部项目</a>
+				    <a href="#tab" class="tab-link button" th:onclick="'getProductList(this)'" th:id="1">中医推拿</a>
+				    <a href="#tab" class="tab-link button" th:onclick="'getProductList(this)'" th:id="2">足疗SPA</a>
+				    <a href="#tab" class="tab-link button" th:onclick="'getProductList(this)'" th:id="3">女性·小儿</a>
 			  	</div>
 			  	<div class="content-block">
-				    <div class="tabs" >
-				      <div id="tab1" class="tab active">
-<!-- 				        <div class="content-block"> -->
-<!-- 				          <div class="card-content"> -->
-						    <div class="list-block media-list">
-					        	<ul th:each="product,count:${productList}">
-						        	<li class="item-content" style="height: 240;" id="productId" th:value="${product.id}">
-						            	<div class="item-media">
-						              		<img src="http://gqianniu.alicdn.com/bao/uploaded/i4//tfscom/i3/TB10LfcHFXXXXXKXpXXXXXXXXXX_!!0-item_pic.jpg_250x250q60.jpg" height="200"/>
-						            	</div>
-						            	<div class="item-inner">
-						              		<div class="item-title-row">
-						                		<div class="item-title" th:text="${product.name}">理疗名称</div>
-						              		</div>
-						              		<div class="item-subtitle" th:text="${product.intro}">介绍</div>
-						              		<span class="icon icon-clock" th:text="${product.duration}"></span>分钟(<span th:text="${product.opeType}"></span>)  &nbsp;&nbsp;
-						              		<span class="icon icon-cart" th:text="${product.paiedCount}"></span> 人已购买
-						              		<div>
-						              			<span style="color: red;font-size: 10" th:text="${product.price}" ></span>元起
-						              			<a href="javascript:buy(this)" class="button button-big button-fill">购买</a>
-						              		</div>
-						            	</div>
-						          	</li>
-						        </ul>
-						      </div>
-<!-- 						    </div> -->
-<!-- 				        </div> -->
-				      </div>
-				      <div id="tab2" class="tab">
-				        <div class="list-block media-list">
-				        	<ul th:each="product,index:${productList}">
-					        	<li class="item-content" style="height: 240;" id="productId" th:value="${product.id}">
-					            	<div class="item-media">
-					              		<img src="http://gqianniu.alicdn.com/bao/uploaded/i4//tfscom/i3/TB10LfcHFXXXXXKXpXXXXXXXXXX_!!0-item_pic.jpg_250x250q60.jpg" height="200"/>
-					            	</div>
-					            	<div class="item-inner">
-					              		<div class="item-title-row">
-					                		<div class="item-title" th:text="${product.name}">理疗名称</div>
-					              		</div>
-					              		<div class="item-subtitle" th:text="${product.intro}">介绍</div>
-					              		<span class="icon icon-clock" th:text="${product.duration}"></span>分钟(<span th:text="${product.opeType}"></span>)  &nbsp;&nbsp;
-					              		<span class="icon icon-cart" th:text="${product.paiedCount}"></span> 人已购买
-					              		<div>
-					              			<span style="color: red;font-size: 10" th:text="${product.price}" ></span>元起
-					              			<a href="javascript:buy(this)" class="button button-big button-fill">购买</a>
-					              		</div>
-					            	</div>
-					          	</li>
-					        </ul>
-				      	</div>
-				      </div>
-				      <div id="tab3" class="tab">
-				        <div class="content-block">
-				          <p>This is tab 3 content</p>
-				        </div>
-				      </div>
-				      <div id="tab3" class="tab">
-				        <div class="content-block">
-				          <p>This is tab 3 content</p>
-				        </div>
-				      </div>
+			    	<div class="tabs">	
+				      <div id="tab" class="tab active"></div>
 				    </div>
 			  	</div>
 			</div>
@@ -145,7 +86,19 @@
 	</body>
 	<!-- 在所有事件后要执行初始化操作 -->
 	<script>
+		/* 初始化才能让幻灯片生效 */
 		$(function(){
+			$.ajax({
+				url:"/mainContr/getProductList",
+				data:{
+					"productType":""
+				},
+				dataType:"html",
+				type:"post",
+				success:function(html){
+					$("#tab").html(html);
+				}
+			});
 			$.init();
 		});
 		
@@ -155,19 +108,22 @@
 		};
 		
 		function getProductList(target){
+			//将产品类型标签都取消选中
+			$("[href='#tab']").each(function(i){
+				$(this).attr("class","tab-link button");
+			});
+			//设置当前标签为选中状态
+			$(target).closest("a").attr("class","tab-link active button");
 			var productType = $(target).attr("id");
-			console.debug(productType);
 			$.ajax({
 				url:"/mainContr/getProductList",
 				data:{
 					"productType":productType
 				},
-				dataType:"text",
+				dataType:"html",
 				type:"post",
-				success:function(text){
-					if("success"==text){
-						$("#tab2").attr("show");
-					};
+				success:function(html){
+					$("#tab").html(html);
 				}
 			})
 		}

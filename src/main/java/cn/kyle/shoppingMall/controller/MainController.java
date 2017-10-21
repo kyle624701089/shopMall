@@ -16,7 +16,6 @@ import javax.servlet.http.HttpServletRequest;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
 
 import cn.kyle.shoppingMall.domain.Product;
 import cn.kyle.shoppingMall.mapper.ProductMapper;
@@ -36,11 +35,10 @@ public class MainController extends BaseController{
 	private ProductMapper productMapper;
 	
 	@RequestMapping("/getProductList")
-	@ResponseBody
 	public String getProductList(HttpServletRequest request,ModelMap modelMap){
 		String productType = request.getParameter("productType");
 		List<Product> productList = productMapper.findProductListByProductType(productType);
 		modelMap.addAttribute("productList", productList);
-		return "success";
+		return "productListPage";
 	}
 }

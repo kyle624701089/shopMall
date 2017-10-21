@@ -7,7 +7,6 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.servlet.ModelAndView;
 
 import cn.kyle.shoppingMall.mapper.UserMapper;
 
@@ -19,14 +18,6 @@ public class UserController {
 
     @Autowired
     private UserMapper userMapper;
-
-    @RequestMapping(value = "/main" ,method = RequestMethod.GET)
-    public ModelAndView userInfo() throws Exception{
-//        List<User> userList = userMapper.findAll();
-        ModelAndView modelAndView = new ModelAndView("/main");
-//        modelAndView.addObject("userList",userList);
-        return modelAndView;
-    }
 
     @RequestMapping(value = "/delete",method = RequestMethod.POST)
     @ResponseBody

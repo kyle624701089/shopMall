@@ -7,8 +7,9 @@ import javax.servlet.http.HttpServletRequest;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import cn.kyle.shoppingMall.domain.Product;
@@ -43,7 +44,7 @@ public class LoginContoller extends BaseController{
      * @param user
      * @return
      */
-    @RequestMapping(value = "/loginValidate",method = RequestMethod.POST)
+    @PostMapping("/loginValidate")
     @ResponseBody
     public String loginValidate(HttpServletRequest request,User user){
         Integer isUserExits = userMapper.isUserExits(user);
@@ -56,15 +57,36 @@ public class LoginContoller extends BaseController{
     }
 
     /**
-     * 跳转到main页面
+     * 用户登陆校验通过后post跳转到main页面
      * @param request
      * @return
      */
-    @RequestMapping(value = "/main",method = RequestMethod.POST)
-    public String main(HttpServletRequest request,ModelMap modelMap){
+    @PostMapping("/main")
+    public String postMain(HttpServletRequest request,ModelMap modelMap){
         request.getSession().setAttribute("USER_IN_SESSION",getUser(request));
         List<Product> productList = productMapper.findAllProduct();
 		modelMap.addAttribute("productList", productList);
         return "main";
     }
+    
+    /**
+     * 
+     * @Title: getMain 
+     * @param：@param modelMap
+     * @param：@return
+     * @return：String
+     * @Description：浏览器刷新get请求到main页面 
+     * @author huyf
+     * @date 2017年10月21日 上午10:45:25
+     * @throws
+     */
+    @GetMapping("/main")
+    public String getMain(ModelMap modelMap){
+    	List<Product> productList = productMapper.findAllProduct();
+		modelMap.addAttribute("productList", productList);
+		modelMap.addAttribute("http", "get");
+        return "main";
+    }
+    
+    
 }
