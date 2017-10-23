@@ -47,4 +47,15 @@
 				AND PRODUCT_TYPE = #{productType}
 			</if>
 	</select>
+	
+	<select id="finaProductByProductId" resultMap="productMap" parameterType="String" useCache="true">
+		SELECT 
+			<include refid="column"/>
+		FROM
+			PRODUCT
+		WHERE
+			<if test="productId != null and productId != ''">
+				AND ID = #{productId}
+			</if>
+	</select>
 </mapper>

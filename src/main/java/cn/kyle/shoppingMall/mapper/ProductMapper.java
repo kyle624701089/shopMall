@@ -49,4 +49,16 @@ public interface ProductMapper {
 	 * @throws
 	 */
 	List<Product> findProductListByProductType(@Param(value="productType") String productType);
+
+	/**
+	 * @Title: finaProductByProductId 
+	 * @param：@param productId
+	 * @param：@return
+	 * @return：Product
+	 * @Description：根据产品id查询对应的产品
+	 * @author sunkai
+	 * @date 2017年10月21日 下午1:58:30
+	 * @throws
+	 */
+	Product finaProductByProductId(@Param(value="productId")String productId);
 }

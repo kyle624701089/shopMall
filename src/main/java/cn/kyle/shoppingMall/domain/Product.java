@@ -31,6 +31,7 @@ public class Product implements Serializable{
 	private String paiedCount;//(已付款人数)
 	private String price;//价格
 	private String productType;//产品分类：1:中医推拿;2:足疗SPA;3:女性·小儿
+	private String imgPath;//图片地址
 	public String getId() {
 		return id;
 	}
@@ -78,6 +79,12 @@ public class Product implements Serializable{
 	}
 	public void setProductType(String productType) {
 		this.productType = productType;
+	}
+	public String getImgPath() {
+		return imgPath;
+	}
+	public void setImgPath(String imgPath) {
+		this.imgPath = imgPath;
 	}
 	@Override
 	public String toString() {
