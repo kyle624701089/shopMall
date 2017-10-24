@@ -2,7 +2,7 @@
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
 	<div class="list-block media-list">
 	 	<ul th:each="product,count:${productList}">
-	  	<li class="item-content" style="height: 240;" id="productId" th:value="${product.id}" th:onclick="openProductDetail(this)">
+	  	<li class="item-content" style="height: 240;" id="productId" th:value="${product.id}" th:onclick="'openProductDetail(this)'">
 	      	<div class="item-media">
 	        		<img src="http://gqianniu.alicdn.com/bao/uploaded/i4//tfscom/i3/TB10LfcHFXXXXXKXpXXXXXXXXXX_!!0-item_pic.jpg_250x250q60.jpg" height="200"/>
 	      	</div>
