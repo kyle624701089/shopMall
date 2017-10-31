@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.kyle.shoppingMall.mapper.ProductDetailMapper">
+	<cache type="org.mybatis.caches.ehcache.LoggingEhcache" />
+	<resultMap type="cn.kyle.shoppingMall.domain.ProductDetail" id="productDetailMap">
+		<id property="id" column="ID" />
+		<result property="productId" column="PRODUCT_ID"/>
+		<result property="detailName" column="DETAIL_NAME"/>
+		<result property="showOrder" column="SHOW_ORDER"/>
+		<collection property="productDetailInfos" javaType="List" select=""></collection>
+	</resultMap>
+</mapper>
