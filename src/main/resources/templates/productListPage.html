@@ -2,25 +2,25 @@
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
 	<div class="list-block media-list">
 	 	<ul th:each="product,count:${productList}">
-	  	<li class="item-content" style="height: 240;" id="productId" th:value="${product.id}" th:onclick="'openProductDetail(this)'">
-	      	<div class="item-media">
-	        		<img src="http://gqianniu.alicdn.com/bao/uploaded/i4//tfscom/i3/TB10LfcHFXXXXXKXpXXXXXXXXXX_!!0-item_pic.jpg_250x250q60.jpg" height="200"/>
-	      	</div>
-	      	<div class="item-inner">
-	      		<input hidden="true" th:value="${product.id}" th:name="productId"/>
-        		<div class="item-title-row">
-          			<div class="item-title" th:text="${product.name}">理疗名称</div>
-        		</div>
-        		<div class="item-subtitle" th:text="${product.intro}">介绍</div>
-        		<span class="icon icon-clock" th:text="${product.duration}"></span>分钟(<span th:text="${product.opeType}"></span>)  &nbsp;&nbsp;
-        		<span class="icon icon-cart" th:text="${product.paiedCount}"></span> 人已购买
-        		<div>
-        			<span style="color: red;font-size: 10" th:text="${product.price}" ></span>元起
-        			<a href="javascript:buy(this)" class="button button-big button-fill">购买</a>
-        		</div>
-	      	</div>
+		  	<li class="item-content" style="height: 240;" th:value="${product.id}" th:onclick="'openProductDetail(this)'">
+		      	<div class="item-media">
+		        		<img src="http://gqianniu.alicdn.com/bao/uploaded/i4//tfscom/i3/TB10LfcHFXXXXXKXpXXXXXXXXXX_!!0-item_pic.jpg_250x250q60.jpg" height="200"/>
+		      	</div>
+		      	<div class="item-inner">
+		      		<input hidden="true" th:value="${product.id}" th:name="productId"/>
+	        		<div class="item-title-row">
+	          			<div class="item-title" th:text="${product.name}">理疗名称</div>
+	        		</div>
+	        		<div class="item-subtitle" th:text="${product.intro}">介绍</div>
+	        		<span class="icon icon-clock" th:text="${product.duration}"></span>分钟(<span th:text="${product.opeType}"></span>)  &nbsp;&nbsp;
+	        		<span class="icon icon-cart" th:text="${product.paiedCount}"></span> 人已购买
+	        		<div>
+	        			<span style="color: red;font-size: 10" th:text="${product.price}" ></span>元起
+	        			<a href="javascript:buy(this)" class="button button-big button-fill">购买</a>
+	        		</div>
+		      	</div>
 	    	</li>
-	  </ul>
+	  	</ul>
 	</div>
 	<script type="text/javascript">
 		/* 购买 */
@@ -34,6 +34,7 @@
 		
 		function openProductDetail(target){
 			var productId = $(target).val();
+			console.debug(productId);
 			$.ajax({
 				url:"/mainContr/productDetail";
 				data:{

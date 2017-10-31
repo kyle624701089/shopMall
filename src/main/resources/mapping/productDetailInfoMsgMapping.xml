@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.kyle.shoppingMall.mapper.ProductDetailInfoMsgMapper">
+	<cache type="org.mybatis.caches.ehcache.LoggingEhcache" />
+	<resultMap type="ProductDetailInfoMsg" id="detailInfoMsgMap">
+		<id property="id" column="ID"/>
+		<result property="order" column="ORDER"/>
+		<result property="detailInfoId" column="DETAIL_INFO_ID"/>
+		<result property="detialMsg" column="DETAIL_MSG"/>
+	</resultMap>
+	
+	<select id="findDetailInfoMsgListByDetailInfoId" parameterType="String" resultMap="detailInfoMsgMap" useCache="true">
+		SELECT
+			*
+		FROM
+			PRODUCT_DETAIL_INFO_MSG
+		WHERE
+			DETAIL_INFO_ID = #{detialInfoId}
+	</select>
+</mapper>

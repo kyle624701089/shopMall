@@ -2,4 +2,21 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="cn.kyle.shoppingMall.mapper.ProductDetailInfoMapper"> 
 	<cache type="org.mybatis.caches.ehcache.LoggingEhcache" />
+	<resultMap type="ProductDetailInfo" id="detailInfoMap">
+		<id property="id" column="ID"/>
+		<result property="productDetailId" column="PRODUCT_DETAIL_ID"/>
+		<result property="detailRange" column="DETAIL_RANGE"/>
+		<result property="detailIntro" column="DETAIL_INTRO"/>
+		<collection property="productDetailInfoMsgs" column="ID" select="cn.kyle.shoppingMall.mapper.ProductDetailInfoMsgMapper.findDetailInfoMsgListByDetailInfoId" />
+	</resultMap>
+	
+	
+	<select id="findProductDetailInfoListByDetailId" parameterType="String" resultMap="detailInfoMap" useCache="true">
+		SELECT
+			* 
+		FROM
+			PRODUCT_DETAIL_INFO
+		WHERE
+			PRODUCT_DETAIL_ID = #{productDetailId}
+	</select>
 </mapper>

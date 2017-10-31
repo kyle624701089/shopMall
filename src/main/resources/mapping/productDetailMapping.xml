@@ -7,6 +7,15 @@
 		<result property="productId" column="PRODUCT_ID"/>
 		<result property="detailName" column="DETAIL_NAME"/>
 		<result property="showOrder" column="SHOW_ORDER"/>
-		<collection property="productDetailInfos" javaType="List" select=""></collection>
+		<collection property="productDetailInfos" javaType="List" column="ID" select="cn.kyle.shoppingMall.mapper.ProductDetailInfoMapper.findProductDetailInfoListByDetailId"/>
 	</resultMap>
+	
+	<select id="findProductDetailByProductId" parameterType="String" resultMap="productDetailMap" useCache="true">
+		SELECT
+			*
+		FROM
+			PRODUCT_DETAIL
+		WHERE
+			PRODUCT_ID = #{productId}
+	</select>
 </mapper>
