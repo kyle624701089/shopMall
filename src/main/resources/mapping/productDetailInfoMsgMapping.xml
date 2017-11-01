@@ -2,7 +2,7 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="cn.kyle.shoppingMall.mapper.ProductDetailInfoMsgMapper">
 	<cache type="org.mybatis.caches.ehcache.LoggingEhcache" />
-	<resultMap type="ProductDetailInfoMsg" id="detailInfoMsgMap">
+	<resultMap type="cn.kyle.shoppingMall.domain.ProductDetailInfoMsg" id="detailInfoMsgMap">
 		<id property="id" column="ID"/>
 		<result property="order" column="ORDER"/>
 		<result property="detailInfoId" column="DETAIL_INFO_ID"/>

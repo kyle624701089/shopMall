@@ -54,9 +54,10 @@
 			<include refid="column"/>
 		FROM
 			PRODUCT
-		WHERE
+		<where>
 			<if test="productId != null and productId != ''">
-				AND ID = #{productId}
+				ID = #{productId}
 			</if>
+		</where>
 	</select>
 </mapper>

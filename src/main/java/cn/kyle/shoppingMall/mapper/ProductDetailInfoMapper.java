@@ -29,14 +29,14 @@ public interface ProductDetailInfoMapper {
 	
 	/**
 	 * 
-	     * @Title: findProductDetailInfoListByDetailId 
-	     * @param productDetailId
-	     * @return
-	     * @return：List<ProductDetailInfo>
-	     * @Description：通过detialId查找对应的所有detailInfo
-	     * @author kyle
-	     * @date 2017年10月31日 下午10:48:12
-	     * @throws
+     * @Title: findProductDetailInfoListByDetailId 
+     * @param productDetailId
+     * @return
+     * @return：List<ProductDetailInfo>
+     * @Description：通过detialId查找对应的所有detailInfo
+     * @author kyle
+     * @date 2017年10月31日 下午10:48:12
+     * @throws
 	 */
 	public List<ProductDetailInfo> findProductDetailInfoListByDetailId(@Param(value="productDetailId")String productDetailId);
 }
