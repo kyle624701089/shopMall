@@ -16,7 +16,10 @@
         <result property="paiedCount" column="PAIEDCOUNT" jdbcType="VARCHAR"/>
         <result property="price" column="PRICE" jdbcType="VARCHAR"/>
         <result property="productType" column="PRODUCT_TYPE" jdbcType="VARCHAR"/>
-        <association property="productDetail" column="ID" select="cn.kyle.shoppingMall.mapper.ProductDetailMapper.findProductDetailByProductId"/>
+        <collection property="productDetailList" column="ID" select="cn.kyle.shoppingMall.mapper.ProductDetailMapper.findProductDetailByProductId">
+        	
+        </collection>
+<!--         <association property="productDetail" column="ID" select="cn.kyle.shoppingMall.mapper.ProductDetailMapper.findProductDetailByProductId"/> -->
     </resultMap>
     
     <sql id="column">

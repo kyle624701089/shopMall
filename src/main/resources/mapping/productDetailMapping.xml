@@ -17,5 +17,7 @@
 			PRODUCT_DETAIL
 		WHERE
 			PRODUCT_ID = #{productId}
+		ORDER BY
+			SHOW_ORDER
 	</select>
 </mapper>

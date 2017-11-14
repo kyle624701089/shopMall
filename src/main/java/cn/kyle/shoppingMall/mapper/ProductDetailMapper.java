@@ -8,6 +8,8 @@
 */ 
 package cn.kyle.shoppingMall.mapper;
 
+import java.util.List;
+
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Repository;
@@ -36,5 +38,5 @@ public interface ProductDetailMapper {
 	 * @date 2017年10月24日 下午8:26:20
 	 * @throws
 	 */
-	public ProductDetail findProductDetailByProductId(@Param(value="productId")String productId);
+	public List<ProductDetail> findProductDetailByProductId(@Param(value="productId")String productId);
 }

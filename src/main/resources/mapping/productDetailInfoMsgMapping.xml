@@ -16,5 +16,7 @@
 			PRODUCT_DETAIL_INFO_MSG
 		WHERE
 			DETAIL_INFO_ID = #{detialInfoId}
+		ORDER BY
+			"ORDER"
 	</select>
 </mapper>

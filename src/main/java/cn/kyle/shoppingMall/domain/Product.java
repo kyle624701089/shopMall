@@ -9,6 +9,7 @@
 package cn.kyle.shoppingMall.domain;
 
 import java.io.Serializable;
+import java.util.List;
 
 /**
  * @ClassName：Product
@@ -33,7 +34,8 @@ public class Product implements Serializable{
 	private String productType;//产品分类：1:中医推拿;2:足疗SPA;3:女性·小儿
 	private String imgPath;//图片地址
 
-	private ProductDetail productDetail;//与产品详情一对一关系
+	private List<ProductDetail> productDetailList;
+//	private ProductDetail productDetail;//与产品详情一对一关系
 	public String getId() {
 		return id;
 	}
@@ -88,11 +90,11 @@ public class Product implements Serializable{
 	public void setImgPath(String imgPath) {
 		this.imgPath = imgPath;
 	}
-	public ProductDetail getProductDetail() {
-		return productDetail;
+	public List<ProductDetail> getProductDetailList() {
+		return productDetailList;
 	}
-	public void setProductDetail(ProductDetail productDetail) {
-		this.productDetail = productDetail;
+	public void setProductDetailList(List<ProductDetail> productDetailList) {
+		this.productDetailList = productDetailList;
 	}
 	@Override
 	public String toString() {

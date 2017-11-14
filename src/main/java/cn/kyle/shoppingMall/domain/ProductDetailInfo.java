@@ -8,6 +8,7 @@
 */ 
 package cn.kyle.shoppingMall.domain;
 
+import java.io.Serializable;
 import java.util.List;
 
 /**
@@ -18,7 +19,8 @@ import java.util.List;
  * @date 2017年10月23日 上午10:06:48
  */
 
-public class ProductDetailInfo {
+public class ProductDetailInfo implements Serializable{
+	private static final long serialVersionUID = 1L;
 	private String id;
 	private String productDetailId;//与产品详情为多对一的关系
 	private String detailRange;//类：适用于、功效、理疗流程等
