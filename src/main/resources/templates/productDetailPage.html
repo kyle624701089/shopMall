@@ -3,7 +3,7 @@
 	<!-- 通过th:object的形式注入上下文对象，后面使用*号取值 -->
    	<div th:object="${product}">
 	  	<header class="bar bar-nav">
-		    <a class="button button-link button-nav pull-left" th:href="@{/main}" data-transition='slide-out'>
+		    <a class="button button-link button-nav pull-left" th:href="@{javascript:history.go(0);}" data-transition='slide-out'>
 		      <span class="icon icon-left"></span>
 		      	返回
 		    </a>
@@ -42,28 +42,35 @@
 			      	</div>
 		 		</div>
 			    <div class="swiper-pagination"></div>
-				<div class="swiper-scrollbar"></div>	
-				 <div class="buttons-tab"> 
-			        <span class="icon icon-clock"></span><i th:text="*{duration}"></i>分钟  
-			        <span class="icon icon-gift"></span><i th:text="*{opeType}"></i>
+				<div class="swiper-scrollbar"></div>
+				 <!--<div class="buttons-tab">
+			        <span class="icon icon-clock"></span><i th:text="*{duration}"></i>分钟&emsp;&emsp;&emsp;
+			        <span class="icon icon-gift"></span><i th:text="*{opeType}"></i>&emsp;&emsp;&emsp;
 			        <span th:text="*{paiedCount}"></span>人选择
-		     	 </div>
+		     	 </div>-->
+				 <div th:class="buttons-tab" >
+					 <!-- 标签页  项目介绍、注意事项、下单需求-->
+					 <span class="icon icon-clock"></span>
+					 <a style="text-align: left" th:href="@{#}" th:class="'tab-link button'" th:text="*{duration}"></a>
+					 <span class="icon icon-gift"></span><a style="text-align: left" th:href="@{#}" th:class="'tab-link button'" th:text="*{opeType}"></a>
+					 <!--<a style="text-align: left" th:href="@{#}" th:class="'tab-link button'" th:text="*{paiedCount}"></a>人选择-->
+				 </div>
 			 </div>
 		 	<!-- 幻灯片  结束 -->
 	 	 	<!-- 详情展示 -->
-		 	<div class="buttons-tab col-xm-12" >
-		 	 	<span th:each="detail,detailStat:*{productDetailList}" class="col-xm-4">
-			 	 	<a th:href="@{#tab}+${detail.showOrder}" th:class="${detail.showOrder==1}?'tab-link active button':'tab-link button'" th:text="${detail.detailName}"></a>
-		 	 	</span>
+		 	<div th:class="buttons-tab" >
+				<!-- 标签页  项目介绍、注意事项、下单需求-->
+				<a th:name="tab_head" th:href="@{#tab}+${detail.showOrder}" th:class="${detail.showOrder==1}?'tab-link active button':'tab-link button'" th:text="${detail.detailName}" th:onclick="'showTab(this)'" th:each="detail,detailStat:*{productDetailList}"></a>
 		 	</div>
 	 	 	<div class="content-block">
-		    	<div class="tabs" th:each="detail,detailStat:*{productDetailList}">	
-			      	<div id="tab+${detail.showOrder}" th:class="${detail.showOrder==1}?'tab active':'tab'">
-			      		<!--  -->
+		    	<div class="tabs" >
+			      	<div th:id="tab+${detail.showOrder}" th:class="${detail.showOrder==1}?'tab active':'tab'" th:each="detail,detailStat:*{productDetailList}" >
+			      		<!-- 适用于、功效、理疗流程 -->
 			      		<div th:each="detailInfo,infoStat:${detail.productDetailInfos}">
-			      			<h4 th:text="${detailInfo.detailRange}" style="color: #00ff00"></h4>
-			      			<p th:text="${detailInfo.detailIntro}" style="font-weight: bolder;color: gray;"></p>
+			      			<h4 th:text="${detailInfo.detailRange}" style="color: #00CC33"></h4>
+			      			<p th:text="${detailInfo.detailIntro}" style="font-weight: lighter;color: gray;"></p>
 			      			<div th:each="infoMsg,msgStat:${detailInfo.productDetailInfoMsgs}">
+								<!--流程下的各细项-->
 			      				<span th:text="${infoMsg.order}"></span>、
 			      				<span th:text="${infoMsg.detialMsg}"></span>
 			      			</div>
@@ -72,6 +79,22 @@
 			    </div>
 	  		</div>
  	 	</div>	
- 	 	
  	</div>
+	<script type="text/javascript">
+		function showTab(target){
+			$(target).siblings().each(function(){
+				$(this).attr("class","tab-link button");
+			});
+			$(target).attr("class","tab-link active button");
+
+			var href = $(target).attr("href").substr(1);
+			$("div.tabs").children().each(function () {
+				if($(this).attr("id")==href){
+					$(this).attr("class","tab active");
+				}else{
+					$(this).attr("class","tab");
+				}
+			});
+		}
+	</script>
 </html>

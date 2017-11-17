@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="zhph_ruleEngine:war">
+    <output-path>E:/IDEA_workspace/svn/trunk/target</output-path>
+    <root id="archive" name="zhph_ruleEngine.war">
+      <element id="artifact" artifact-name="zhph_ruleEngine:war exploded" />
+    </root>
+  </artifact>
+</component>

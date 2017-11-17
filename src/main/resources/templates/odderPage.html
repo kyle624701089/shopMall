@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+    <div th:object="${product}">
+        <span th:text="*{id}"></span>
+        <span th:text="*{name}"></span>
+        <span th:text="*{intro}"></span>
+        <span th:text="*{duration}"></span>
+        <span th:text="*{opeType}"></span>
+        <span th:text="*{paiedCount}"></span>
+    </div>
+
+</html>
