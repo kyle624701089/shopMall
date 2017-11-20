@@ -8,8 +8,6 @@
 */ 
 package cn.kyle.shoppingMall.domain;
 
-import java.io.Serializable;
-
 /**
  * @ClassName：ProductDetailInfoMsg
  * @Description：简介下对应的多个说明
@@ -18,7 +16,7 @@ import java.io.Serializable;
  * @date 2017年10月24日 下午8:08:37
  */
 
-public class ProductDetailInfoMsg implements Serializable{
+public class ProductDetailInfoMsg extends BaseEntity{
 	private static final long serialVersionUID = 1L;
 	private String id;
 	private Integer order;//展示顺序

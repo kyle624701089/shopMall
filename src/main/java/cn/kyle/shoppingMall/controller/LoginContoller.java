@@ -1,10 +1,12 @@
 package cn.kyle.shoppingMall.controller;
 
 import java.util.List;
+import java.util.UUID;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 
+import cn.kyle.shoppingMall.domain.ShoppingCart;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -50,6 +52,14 @@ public class LoginContoller extends BaseController{
         Integer isUserExits = userMapper.isUserExits(user);
         if (isUserExits == 1){
             request.getSession().setAttribute("USER_IN_SESSION",user);
+            ShoppingCart cartInSession = (ShoppingCart)request.getSession().getAttribute("CART_IN_SESSION");
+            if (cartInSession==null){
+                //session中没有购物车则创建一个,并与user关联，然后放到session中
+                cartInSession = new ShoppingCart();
+                cartInSession.setCartId(UUID.randomUUID().toString().replace("-",""));
+                cartInSession.setUserId(user.getId());
+                request.getSession().setAttribute("CART_IN_SESSION",cartInSession);
+            }
             return "true";
         } else {
             return "false";

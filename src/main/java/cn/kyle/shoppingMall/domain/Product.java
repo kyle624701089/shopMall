@@ -8,7 +8,6 @@
 */ 
 package cn.kyle.shoppingMall.domain;
 
-import java.io.Serializable;
 import java.util.List;
 
 /**
@@ -19,7 +18,7 @@ import java.util.List;
  * @date 2017年10月18日 下午8:10:40
  */
 
-public class Product implements Serializable{
+public class Product extends BaseEntity{
 	/** 
 	* @Fields serialVersionUID : TODO(用一句话描述这个变量表示什么) 
 	*/ 

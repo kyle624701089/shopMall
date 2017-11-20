@@ -8,8 +8,6 @@
 */ 
 package cn.kyle.shoppingMall.domain;
 
-import java.io.Serializable;
-
 /**
  * @ClassName：ProductAndPageRelation
  * @Description：产品和产品分页的关系维护类
@@ -18,7 +16,7 @@ import java.io.Serializable;
  * @date 2017年10月19日 下午2:18:32
  */
 
-public class ProductAndPageRelation implements Serializable{
+public class ProductAndPageRelation extends BaseEntity{
 	
 	/** 
 	* @Fields serialVersionUID : TODO(用一句话描述这个变量表示什么) 

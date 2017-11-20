@@ -1,11 +1,9 @@
 package cn.kyle.shoppingMall.domain;
 
-import java.io.Serializable;
-
 /**
  * Created by Administrator on 2017/9/14.
  */
-public class User implements Serializable{
+public class User extends BaseEntity{
 
     /** 
 	* @Fields serialVersionUID : TODO(用一句话描述这个变量表示什么) 

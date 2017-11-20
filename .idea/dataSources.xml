@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="DataSourceManagerImpl" format="xml" hash="2616320662">
+  <component name="DataSourceManagerImpl" format="xml" hash="201907999">
     <data-source source="LOCAL" name="微信商城" uuid="deedd57f-da28-4572-96f0-64ff5ac8a5a0">
       <driver-ref>mysql</driver-ref>
       <synchronize>true</synchronize>
